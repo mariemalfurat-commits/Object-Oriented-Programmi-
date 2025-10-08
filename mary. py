@@ -1,0 +1,31 @@
+#مريم فرات جلوب 
+#ياسمين وليد عبد الجبار 
+#مريم محمد صبحي 
+C كروب 
+dic = {
+    "username": "mariam",
+    "pass": "200411",
+    "name": "mariam furat ",
+    "age": 21,
+    "mail": "mariemalfurat@gmail.com",
+}
+
+attempts3 = 3
+attempts = 0
+
+while attempts < attempts3:
+    User = input("mariam: ")
+    Pass = input("200411: ")
+
+    if User == dic["mariam "] and Pass == dic["200411"]:
+        print(f"Welcome {dic['mariam ']}\nYour Age is {dic['21']}\nYour Mail is {dic['mariemalfurat@gmail.com']}")
+        break
+    else:
+        attempts += 1
+        remaining = attempts3 - attempts
+        
+        if remaining > 0:
+            print(f"Username or Password Wrong — {remaining} attempt left\n")
+        else:
+            dic.clear()
+            print("Account locked")
